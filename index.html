@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App with Streak Points</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .todo-item { display: flex; justify-content: space-between; margin-bottom: 10px; }
+    .completed { text-decoration: line-through; }
+    #clear-all { display: none; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Todo List</h1>
+    <input type="text" id="new-task" placeholder="Add a new task" />
+    <button onclick="addTask()">Add Task</button>
+    <h2>Tasks</h2>
+    <div id="todo-list"></div>
+    <h2>Completed Tasks</h2>
+    <div id="completed-list"></div>
+    <button id="clear-all" onclick="clearAllCompletedTasks()">Clear All</button>
+    <h2>Streak Points: <span id="streak-points">0</span></h2>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
